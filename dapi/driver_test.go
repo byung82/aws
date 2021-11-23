@@ -34,7 +34,7 @@ func TestNewOpen(t *testing.T) {
 	require.NoError(t, err)
 
 	opts := []Option{
-		WithDataServiceApiOption(rdsdataservice.New(sess)),
+		WithDataServiceApi(rdsdataservice.New(sess)),
 		WithDatabase(os.Getenv("DB_NAME")),
 		WithDbEngine(DbEnginePostgres),
 		WithResourceArn(os.Getenv("AWS_RESOURCE_ARN")),

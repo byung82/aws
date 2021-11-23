@@ -58,7 +58,7 @@ func (c continueAfterTimeoutOption) apply(opts *options) {
 	opts.continueAfterTimeout = null.BoolFrom(bool(c))
 }
 
-func WithDataServiceApiOption(dataServiceApi rdsdataserviceiface.RDSDataServiceAPI) Option {
+func WithDataServiceApi(dataServiceApi rdsdataserviceiface.RDSDataServiceAPI) Option {
 	return dataServiceApiOption{
 		DataServiceApi: dataServiceApi,
 	}
